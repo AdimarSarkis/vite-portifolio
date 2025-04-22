@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+    mode: 'jit',
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx,css}",
@@ -60,5 +61,14 @@ export default {
             },
         },
     },
+    safelist: [
+        'special-font', // Adicione suas classes personalizadas aqui
+        'mask-clip-path',
+        'border-hsla',
+        'nav-hover-btn',
+        'floating-nav',
+        'absolute-center',
+        'flex-center',
+      ],
     plugins: [],
 }

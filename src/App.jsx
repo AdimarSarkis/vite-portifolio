@@ -1,14 +1,14 @@
 import React from 'react'
+import Hero from './components/Hero'
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-7xl text-amareloLima-300'>Bem ao meu portfolio</h1>
-      <div className="special-font">
-  Testando a fonte especial
-</div>
-    </div>
+    <main className='relative min-h-screen w-screen overflow-x-hidden'>
+      <Hero />
+      <section className='z-0 min-h-screen bg-blue-500'/>
+    </main>
   )
 }
 
 export default App
+
