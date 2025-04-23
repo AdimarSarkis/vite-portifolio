@@ -1,7 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react'
 import '../index.css'
-import { TiLocation, TiDownload  } from 'react-icons/ti';
-import Button from './Button';
+import { TiDownload  } from 'react-icons/ti';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -22,6 +21,14 @@ const Hero = () => {
     setCurrentIndex(upcomingVideoIndex);
   }
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/Currículo - ADIMAR.pdf'; // Caminho para o arquivo na pasta public
+    link.download = 'Currículo - ADIMAR.pdf'; // Nome do arquivo ao ser baixado
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);
@@ -154,12 +161,13 @@ const Hero = () => {
               <div className="mt-24 px-5 sm:px-10">
                 <h1 className='special-font hero-heading text-light-secondary'>Adimar Sarkis da Cruz</h1>
                 <p className='mb-5 max-w-64 font-robert-regular text-light-secondary'>Engenheiro de Controle e Automação <br/> Baixe meu curriculo </p>
-                <Button id='curriculo' title='Baixar meu Curriculo' leftIcon={<TiDownload />}
-                containerClass="!bg-yellow-300 flex-center gap-1" />
+                <a download={true} href='/Currículo - ADIMAR.pdf' onClick={handleDownload}
+                  className="group relative z-10 w-fit cursor-pointer
+    overflow-hidden rounded-full px-7 py-3 text-black !bg-yellow-300 flex-center gap-1" >{<TiDownload />} Baixe o meu Curriculo</a>
               </div>
             </div>
         </div>
-      
+    
         <h1 className='special-font hero-heading absolute bottom-5
             right-5 text-dark-quaternary'>Portfolio</h1>
 
