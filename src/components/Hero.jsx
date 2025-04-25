@@ -103,7 +103,7 @@ const Hero = () => {
 
   
   return (
-    <div className='relative h-dvh w-screen overflow-x-hidden'>
+    <div id='home' className='relative h-dvh w-screen overflow-x-hidden'>
       {isLoading && (
         <div className='flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50'>
           <div className="three-body">
@@ -159,8 +159,8 @@ const Hero = () => {
 
             <div className="absolute left-0 top-0 z-40 size-full">
               <div className="mt-24 px-5 sm:px-10">
-                <h1 className='special-font hero-heading text-light-secondary'>Adimar Sarkis da Cruz</h1>
-                <p className='mb-5 max-w-64 font-robert-regular text-light-secondary'>Engenheiro de Controle e Automação <br/> Baixe meu curriculo </p>
+                <h1 className='special-font hero-heading text-light-secondary'>Adimar Sarkis</h1>
+                <p className='mb-5 max-w-75 font-robert-regular text-light-secondary'>Engenheiro de Controle e Automação <br/> Desenvolvedor Front-end </p>
                 <a download={true} href='/Currículo - ADIMAR.pdf' onClick={handleDownload}
                   className="group relative z-10 w-fit cursor-pointer
     overflow-hidden rounded-full px-7 py-3 text-black !bg-yellow-300 flex-center gap-1" >{<TiDownload />} Baixe o meu Curriculo</a>

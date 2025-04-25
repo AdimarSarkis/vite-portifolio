@@ -1,5 +1,6 @@
 import React from 'react'
 import gsap from 'gsap'
+import AnimatedTitle from './AnimatedTitle'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -32,15 +33,17 @@ const About = () => {
 
 
   return (
-    <div id='about' className='min-h-screen w-screen'>
+    <div id='sobre' className='min-h-screen w-screen'>
       <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
         <h2 className='font-general text-lg font-bold uppercase md:text-[20px]'>Sobre mim</h2>
       
-        <div className='mt-5 text-center text-4xl uppercase leading-[0.8] md:text-[6rem]'>
-          Oi! Eu sou o A<b>d</b>imar, engenheiro de Contr<b>o</b>le e Automação apaixonado por tecnologia 
-        </div>
+      <AnimatedTitle
+        title='Oi! Eu sou o A<b>d</b>imar, engenheiro de Contr<b>o</b>le e Automação apaixonado por tecnologia'
+        containerClass={`mt-5 !text-black text-center`}
+      />
+        
 
-        <div className=' w-screen p-7 text-center font-circular-web text-lg md:max-w-[90rem]'>
+        <div className=' w-screen p-7 text-justify font-circular-web text-lg md:text-[20px] md:max-w-[90rem]'>
           <p>Depois de me formar pela UTFPR e passar um tempo metendo a mão na massa em manutenção de automação industrial, 
     descobri que também curto transformar dados em decisões, processos em sistemas e ideias em código.
 </p>
