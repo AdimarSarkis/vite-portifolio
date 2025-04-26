@@ -18,7 +18,7 @@ const Navbar = () => {
         y: currentScrollY
     } = useWindowScroll();
     const navItems = [
-        'Home', 'Sobre', 'Habilidades', 'Projetos', 'Contato'
+        'Home', 'Sobre', 'Habilidades', 'Projetos'
     ]
     
 
@@ -74,7 +74,7 @@ const Navbar = () => {
                 <img src='/img/eu zzz.png' alt='logo' className='w-10 h-10 rounded-full object-cover' />
                 <Button
                     id='product-button'
-                    title='Projetos'
+                    title='Contato'
                     rightIcon={<TiLocation />}
                     containerClass='!bg-blue-50 md:flex hidden items-center
                        justify-center gap-1'
@@ -101,13 +101,15 @@ const Navbar = () => {
                     src='public/audio/With Glory I Shall Fall (Cartethyia Theme) GMV — Wuthering Waves.mp3'
                     loop
                      className='hidden' />
-                        {[1,2,3,4].map((bar)=> (
-                            <div key={bar} 
-                            className={`indicator-line cursor-pointer
-                            ${isIndicatorActive ? 'active' : ''}`} 
-                            style={{ animationDelay: `${bar * 0.1}s` }}
-                            />
-                        ))}
+                        <div className='flex flex-row p-4 cursor-pointer'>
+                            {[1,2,3,4].map((bar)=> (
+                                <div key={bar} 
+                                className={`indicator-line cursor-pointer
+                                ${isIndicatorActive ? 'active' : ''}`} 
+                                style={{ animationDelay: `${bar * 0.1}s` }}
+                                />
+                            ))}
+                        </div>
                   
                 </button>
             </div>
