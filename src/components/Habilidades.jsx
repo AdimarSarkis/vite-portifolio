@@ -61,7 +61,7 @@ const BentoCard = ({ src, title, description }) => {
 
 const Features = () => {
   return (
-    <section className="bg-dark-quaternary pb-52">
+    <section id="habilidades"  className="bg-dark-quaternary pb-52">
       <div className="container mx-auto px-3 md:px-10">
         <div className="flex flex-col items-center justify-center py-20">
           <AnimatedTitle
