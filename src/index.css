@@ -217,6 +217,17 @@ animation-delay: calc(var(--animation-order) * 0.1s);
 }
 }
 
+.mirror-effect {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  filter: blur(2px);
+}
+
 /* From Uiverse.io by G4b413l */
 /* https://uiverse.io/G4b413l/tidy-walrus-92 */
 .three-body {
@@ -284,6 +295,31 @@ transform: translateX(116.666%);
 top: 0;
 left: 0;
 animation: wobble2 var(--uib-speed) infinite ease-in-out;
+}
+
+.animacao1 {
+  animation: scroll1 60s linear infinite;
+}
+.animacao2 {
+  animation: scroll2 60s linear infinite;
+}
+
+@keyframes scroll1 {
+  0% { 
+    transform: translateX(100%);
+  }
+  100% { 
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% { 
+    transform: translateX(-200%);
+  }
 }
 
 @keyframes spin78236 {

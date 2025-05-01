@@ -15,6 +15,7 @@ const Hero = () => {
   const totalVideos = 4;
   const nextVideoRef = useRef(null);
 
+
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
   const handleMiniVdClick = () => {
     setHasClicked(true);
@@ -97,6 +98,7 @@ const Hero = () => {
   useEffect(() => {
     if(loadedVideos === totalVideos - 1) {
       setIsLoading(false);
+
     }
   }, [loadedVideos])
 
@@ -128,7 +130,7 @@ const Hero = () => {
                         muted
                         id='current-video'
                         className="size-64 origin-center scale-150
-                        object-cover object-center"
+                        brightness-75 object-cover object-center"
                         onLoadedData={handleVideoLoad}
                       />
                     </div>
@@ -141,7 +143,7 @@ const Hero = () => {
                   muted
                   id='next-video'
                   className='absolute-center invisible absolute z-20 size-64
-                  object-cover object-center'
+                  brightness-50 object-cover object-center'
                 />
 
                 <video 
@@ -149,7 +151,8 @@ const Hero = () => {
                   autoPlay
                   loop
                   muted
-                  className='absolute left-0 top-0 size-full object-cover object-center'
+                  className='absolute
+                  brightness-50 left-0 top-0 size-full object-cover object-center'
                   onLoadedData={handleVideoLoad}
                 />     
             </div>
