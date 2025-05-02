@@ -99,7 +99,7 @@ const Navbar = () => {
                 className='ml-10 flex items-center space-x-0.5'>
                     <audio 
                     ref={audioElementRef}
-                    src='public/audio/With Glory I Shall Fall (Cartethyia Theme) GMV — Wuthering Waves.mp3'
+                    src='public/audio/Glory.mp3'
                     loop
                      className='hidden' />
                         <div className='flex flex-row p-4 cursor-pointer'>

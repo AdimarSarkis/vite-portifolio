@@ -82,7 +82,7 @@ const Features = () => {
       w-full overflow-hidden rounded-md md:h-[65vh"
           >
             <BentoCard
-              src="videos/feature-react.mp4"
+              src="videos/feature-1.mp4"
               title={
                 <>
                   Des<b>e</b>nvolvimento <b>W</b>eb
@@ -109,7 +109,7 @@ const Features = () => {
 
             <BentoTilt className="bento-tilt_1 row-span-1 col-span-2 ms-32 md:col-span-1 md:ms-0">
               <BentoCard
-                src="videos/feature-node-red.mp4"
+                src="videos/feature-3.mp4"
                 title={
                   <>
                     N<b>o</b>de-<b>RED</b>
@@ -120,7 +120,7 @@ const Features = () => {
             </BentoTilt>
             <BentoTilt className="bento-tilt_1 col-span-2 me-14 md:col-span-1 md:me-0">
               <BentoCard
-                src="videos/feature-powerbi.mp4"
+                src="videos/feature-4.mp4"
                 title={
                   <>
                     P<b>o</b>wer <b>BI</b>
